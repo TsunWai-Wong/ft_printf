@@ -13,7 +13,7 @@ The following datatype can be handled:
 - %X: Hexadecimal Integer (in UPPERCASE)
 - %%: Percentage Sign
 
-### Instructions
+### Getting Started
 1. Compile the functions and turn them into a static c library
 ```
 make
