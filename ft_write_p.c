@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-static char	hex_to_char(unsigned int value)
+static char	hex_to_char(unsigned long value)
 {
-	if (value >= 0 && value <= 9)
+	if (value <= 9)
 		return (value + '0');
 	else
 		return (value - 10 + 'a');
@@ -39,6 +39,7 @@ static void	ft_write_p_recur(unsigned long value)
 int	ft_write_p(void *ptr)
 {
 	unsigned long	value;
+	unsigned long   temp_value;
 	unsigned int	count;
 
 	if (!ptr)
@@ -49,11 +50,14 @@ int	ft_write_p(void *ptr)
 	write(1, "0x", 2);
 	count = 2;
 	value = (unsigned long) ptr;
-	ft_write_p_recur(value);
-	while (value > 0)
+	temp_value = value;
+    if (temp_value == 0)
+        count++;
+	while (temp_value > 0)
 	{
-		value /= 16;
+		temp_value /= 16;
 		count++;
 	}
+	ft_write_p_recur(value);
 	return (count);
 }

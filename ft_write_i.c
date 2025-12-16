@@ -30,13 +30,13 @@ static void	ft_write_i_recur(unsigned int value)
 
 int	ft_write_i(int value)
 {
-	int				count;
-	unsigned int	num;
+	int		count;
+	long	num;
 
 	count = 0;
 	if (value < 0)
 	{
-		num = -1 * value;
+		num = (-(long)value);
 		count += ft_write_c('-');
 	}
 	else
