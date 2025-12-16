@@ -12,8 +12,6 @@
 
 #include "ft_printf.h"
 
-#include <stdio.h>
-
 int	ft_router(va_list argv, char c)
 {
 	if (c == 'c')
@@ -43,10 +41,7 @@ int	ft_printf(const char *str, ...)
 	while (*str)
 	{
 		if (*str != '%')
-		{
-			ft_write_c(*str);
-			count += 1;
-		}
+			count += ft_write_c(*str);
 		else
 		{
 			str++;

@@ -44,5 +44,5 @@ int	ft_write_u(unsigned int value)
 			count++;
 		}
 	}
-	return (count * sizeof(char));
+	return (count);
 }

@@ -52,5 +52,5 @@ int	ft_write_i(int value)
 			count++;
 		}
 	}
-	return (count * sizeof(char));
+	return (count);
 }

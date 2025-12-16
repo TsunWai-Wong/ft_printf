@@ -11,11 +11,11 @@
 # **************************************************************************** #
 
 NAME = libftprintf.a
+
 SRC = ft_printf.c ft_write_c.c ft_write_i.c ft_write_p.c ft_write_percent.c \
 ft_write_s.c ft_write_u.c ft_write_x.c
 
 OBJ = $(SRC:.c=.o)
-BOBJ = $(BSRC:.c=.o)
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -26,7 +26,7 @@ $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 clean:
-	rm -f $(OBJ) $(BOBJ)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)

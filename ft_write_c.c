@@ -15,5 +15,5 @@
 int	ft_write_c(char c)
 {
 	write(1, &c, 1);
-	return (sizeof(char));
+	return (1);
 }

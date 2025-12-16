@@ -55,5 +55,5 @@ int	ft_write_x(unsigned int value, char case_type)
 			count++;
 		}
 	}
-	return (count * sizeof(char));
+	return (count);
 }

@@ -55,5 +55,5 @@ int	ft_write_p(void *ptr)
 		value /= 16;
 		count++;
 	}
-	return (count * sizeof(char));
+	return (count);
 }
